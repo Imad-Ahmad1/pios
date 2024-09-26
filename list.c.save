@@ -1,0 +1,41 @@
+#include "list.h"
+#include <stddef.h> //NULL
+
+void list_add(ListNode **head, void *data) {
+	ListNode *new_node = (ListNode *)malloc(sizeof(ListNode));
+	if (new_node == NULL) {
+		//memory allocation
+		return;
+}
+	new_node->data = data;
+	new_node->next =*head;
+	*head = new_node;
+}
+
+
+void list_remove(ListNode **head, ListNode *node) {
+	ListNode *current = *head;
+	ListNode *previous = NULL;
+
+	//remove node
+
+	while (current !=NULL; && current != node) {
+		previous = current;
+		current = current->next;
+}
+
+	if (current == NULL){
+		return; //if not found
+}
+
+
+	if (previous == NULL) {
+		*head = current->next;//remove head
+	}else{
+		previous->next = current->next;
+}
+
+		free(current);//free node
+}
+
+
