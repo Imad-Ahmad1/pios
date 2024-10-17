@@ -35,12 +35,13 @@ char huge_array[8192];
 unsigned long get_timer_count();
 void timerprob();
 
+
+
 void kernel_main() {
 
 <<<<<<< HEAD
 char thing[] = "helloworld";
 esp_printf(putc, "%s", thing);
-
 
 
 
