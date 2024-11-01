@@ -15,7 +15,13 @@ SDIR = src
 OBJS = \
 	boot.o \
 	kernel_main.o \
-	mmu.o\
+	mmu.o \
+	fat.o \
+	rprintf.o \
+	serial.o \
+	sd.o \
+	delays.o\
+
 
 OBJ = $(patsubst %,$(ODIR)/%,$(OBJS))
 
